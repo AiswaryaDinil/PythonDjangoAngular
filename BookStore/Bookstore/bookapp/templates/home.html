@@ -1,0 +1,114 @@
+{% extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            {%if messages%}
+            {%for m in messages%}
+            {% if m.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{m}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {%endif%}
+            {%endfor%}
+            {%endif%}
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+<!-- slider section -->
+<section class="slider_section ">
+    <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail-box">
+                                <h5>Bookstore </h5>
+                                <h1>For All Your <br>Reading Needs</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe
+                                    dolorem deserunt quo quidem ad optio.
+                                </p>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="static/images/slider-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail-box">
+                                <h5>Bookstore</h5>
+                                <h1>For All Your <br>Reading Needs</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Iste quam velit saepe dolorem deserunt quo quidem ad optio.
+                                </p>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="static/images/slider-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail-box">
+                                <h5>Bookstore</h5>
+                                <h1>For All Your <br>Reading Needs</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Iste quam velit saepe dolorem deserunt quo quidem ad optio.
+                                </p>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="img-box">
+                                <img src="static/images/slider-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel_btn_box">
+            <a class="carousel-control-prev" href="#customCarousel1" role="button"
+               data-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#customCarousel1" role="button"
+               data-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- end slider section -->
+{%for book in books%}
+<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header">{{book.bookname}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{book.author}}</h5>
+    <p class="card-text">{{book.price}}</p>
+    <p class="card-text">{{book.publisher}}</p>
+  </div>
+</div>
+{%endfor%}
+{%endblock%}
