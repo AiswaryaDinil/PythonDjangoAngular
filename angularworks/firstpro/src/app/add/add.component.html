@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h1>Add Numbers</h1>
+            <div class="mb-3">
+                <input type="text" class="form-control" #num1>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" #num2>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info" (click)="addNumbers(num1,num2) ">Add</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                Result={{result}}
+            </div>
+        </div>
+    </div>
+</div>

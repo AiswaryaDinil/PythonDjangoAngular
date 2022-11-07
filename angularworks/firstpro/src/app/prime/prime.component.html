@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h1>Find Prime</h1>
+            <div class="mb-3">
+                <input type="text" class="form-control" #num >
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-info" (click)="checkPrime(num)">Prime</button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                prime={{res}}
+            </div>
+        </div>
+    </div>
+</div>

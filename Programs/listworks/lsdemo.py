@@ -5,10 +5,10 @@
 # print(expenses[0])
 # print(expenses[1])
 # print(expenses[-1])
-#
+
 # for i in range(0,4):
 #     print(expenses[i])
-#
+
 # for amount in expenses:
 #     print(amount)
 
@@ -53,16 +53,27 @@
 # print(count)
 
 
-numbers=[3,8,-2,-7,8,2,0,1,-9,0]
-p_count=0
-n_count=0
-z_count=0
+# numbers=[3,8,-2,-7,8,2,0,1,-9,0]
+# p_count=0
+# n_count=0
+# z_count=0
+#
+# for n in numbers:
+#     if n>0:
+#         p_count+=1
+#     elif n<0:
+#         n_count+=1
+#     elif n==0:
+#         z_count+=1
+# print(f"{p_count} {n_count} {z_count}")
 
-for n in numbers:
-    if n>0:
-        p_count+=1
-    elif n<0:
-        n_count+=1
-    elif n==0:
-        z_count+=1
-print(f"{p_count} {n_count} {z_count}")
+
+lst = [1, 2, 1, 2, 3, 4, 5, 1, 1, 2, 5, 6, 7, 8, 9, 9]
+uniqueList = []
+duplicateList = []
+for i in lst:
+    if i not in uniqueList:
+        uniqueList.append(i)
+    elif i not in duplicateList:
+        duplicateList.append(i)
+print(duplicateList)
